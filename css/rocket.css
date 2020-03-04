@@ -1,14 +1,59 @@
+body{
+	font-family: 'roboto', 'helvetica', san-serif;
+	text-transform: uppercase;
+	color: white;
+	font-size: 29px;
+}
+
 .left{
-	background-color: lightblue;
-	position: fixed;
+	background: url('../img/bg-left.jpg') no-repeat center center;
+	position: absolute;
 	width: 50%;
 	height: 100%;
 	top: 0;
 	left: 0;
 }
 
+.bottom{
+	background: url('../img/trump.png') no-repeat center center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 496px;
+}
+
+.interface{
+	text-align: center;
+	padding: 20px;
+	color: white;
+}
+
+a.button{
+	display: inline-block;
+	background-color: red;
+	color: white;
+	padding: 15px 40px;
+	text-decoration: none;
+	border-radius: 8px;
+	text-transform: uppercase;
+	transition: color 300ms;
+	transition: background-color 300ms;
+}
+
+a.link{
+	color: white;
+	text-decoration: none;
+	transition: color 300ms;
+	transition: background-color 300ms;
+}
+
+a:hover{
+	background-color: darkred;
+}
+
 .right{
-	background-color: cyan;
+	background: url('../img/bg-right.jpg');
 	position: fixed;
 	width: 50%;
 	height: 100%;
@@ -17,23 +62,68 @@
 }
 
 .ground{
-	background-color: green;
+	background: url('../img/ground.png') no-repeat center center;
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 20px;
+	height: 452px;
+}
+
+.smart{
+	position: absolute;
+	bottom: 230px;
+	left: 50%;
+	background: url('../img/SMART.png') no-repeat 0 0;
+	width: 284px;
+	height: 191px;
+	margin-left: -265px;
+	display: none;
+}
+.smart.show{
+	display: block;
+}
+
+.bye-losers{
+	position: absolute;
+	bottom: 255px;
+	left: 50%;
+	background: url('../img/LOSERS.png') no-repeat 0 0;
+	width: 284px;
+	height: 191px;
+	display: none;
+}
+.bye-losers.show{
+	display: block;
 }
 
 .rocket{
 	position: absolute;
 	left: 50%;
-	bottom: 20px;
-	width: 20px;
-	height: 100px;
-	background-color: blue;
+	bottom: -70px;
+	width: 87px;
+	height: 395px;
+	margin-left: -43.5px;
+	background: url('../img/trump-state1.png') no-repeat 0 0;
 	transition: bottom 10000ms;
+	z-index: 5;
 }
+
+/* rocket bg image */
+body.body-state2 .rocket{
+	background-image: url('../img/trump-state2.png');
+}
+body.body-state3 .rocket,
+body.body-state4 .rocket{
+	background-image: url('../img/trump-state3.png');
+}
+body.body-state5 .rocket{
+	background-image: url('../img/explosion.png');
+	width: 346px;
+	height: 272px;
+	margin-left: -173px;
+}
+
 
 body.body-state1 .rocket{
 	transition: none;

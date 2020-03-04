@@ -13,6 +13,20 @@ var changeState = function (state) {
 			countdownNumber = countdownNumber -1;
 			document.getElementById('countdown').innerHTML = countdownNumber;
 			
+			if (countdownNumber > 4 && countdownNumber <= 7) {
+				// SMART
+				document.getElementById('smart').className = 'smart show';
+			} else{
+				document.getElementById('smart').className = 'smart';
+			}
+
+			if (countdownNumber > 1 && countdownNumber <= 4) {
+				// BYE LOSERS
+				document.getElementById('bye-losers').className = 'bye-losers show';
+			} else{
+				document.getElementById('bye-losers').className = 'bye-losers';
+			}
+
 			if (countdownNumber <= 0) {
 				changeState(3)
 			};
@@ -24,7 +38,7 @@ var changeState = function (state) {
 				console.log('randomNumber:', randomNumber)
 
 				// success
-				if (randomNumber > 5) {
+				if (randomNumber > 4) {
 					changeState(4);
 
 				} else {
